@@ -1,16 +1,16 @@
 {
   "files": {
     "main.css": "/poke-store/static/css/main.94988db0.css",
-    "main.js": "/poke-store/static/js/main.a4ed51ae.js",
+    "main.js": "/poke-store/static/js/main.0dc27cde.js",
     "static/js/453.c5c6dfc0.chunk.js": "/poke-store/static/js/453.c5c6dfc0.chunk.js",
     "static/media/pokemon.png": "/poke-store/static/media/pokemon.52c29c33c90db3abe881.png",
     "index.html": "/poke-store/index.html",
     "main.94988db0.css.map": "/poke-store/static/css/main.94988db0.css.map",
-    "main.a4ed51ae.js.map": "/poke-store/static/js/main.a4ed51ae.js.map",
+    "main.0dc27cde.js.map": "/poke-store/static/js/main.0dc27cde.js.map",
     "453.c5c6dfc0.chunk.js.map": "/poke-store/static/js/453.c5c6dfc0.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.94988db0.css",
-    "static/js/main.a4ed51ae.js"
+    "static/js/main.0dc27cde.js"
   ]
 }
