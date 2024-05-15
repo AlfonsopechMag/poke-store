@@ -141,7 +141,7 @@ export default function Header({ changeCurrency, cartItems, deleteItems, currenc
                   <span className={css.wallet_label}>{"$" + walletMoney}</span>                  
                 </div>
             </div>
-            <div className={css.div_logo}>
+            <div className={css.div_currency}>
                 <select className={css.currency} id="currency" onChange={(e)=>changeCurrency(e)}>
                     <option value="MXN">MXN</option>
                     <option value="USD">USD</option>
@@ -151,21 +151,21 @@ export default function Header({ changeCurrency, cartItems, deleteItems, currenc
                 </select>
             </div>
 
-            <div className={css.div_logo}>            
+            <div className={css.div_market}>            
                 <div className="">
                     <button
                         type="button"
                         id="button-market"
-                        className="btn"
+                        className={css.btn_market}
                         onClick={(e)=>showFounds(e)}
                         >
-                        <FaCommentDollar/>
+                        <FaCommentDollar className={css.icon_dollar}/>
                     </button>
                 {showAddFounds && 
                     <Modal show={showAddFounds} handleClose={()=>setShowAddFounds(false)}>
                         <h1>Add Founds to Wallet</h1>
                         <form onSubmit={handleRechargeWallet}>
-                            <label for="fname" className={css.quantity_label}>Quantity:</label><br/>
+                            <label htmlFor="fname" className={css.quantity_label}>Quantity:</label><br/>
                             <input type="number" className={css.wallet_input} name="wallet" /><br/>
                             <div className={css.confirm_row}>
                               <button
@@ -183,7 +183,7 @@ export default function Header({ changeCurrency, cartItems, deleteItems, currenc
                 <div className="product-row">
                     <div className="info-cart-product">
                         
-                        <button type="button" onClick={()=>setShowCart(!showCart)}>
+                        <button type="button" className={css.btn_cart} onClick={()=>setShowCart(!showCart)}>
                           <BsCart4 className={css.cart_icon} />
                         </button>
                        

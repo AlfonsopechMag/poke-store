@@ -25,7 +25,7 @@
         overflow: hidden;
 
         .item_izquierdo {
-            background-color: #5865f2;
+            background-color: #ffcb05;
             height: 30px;
             width: 30px;
             color: white;
@@ -40,10 +40,10 @@
             display: grid;
             place-items: center;
             background-color: #424242;
-            border: 1px solid #5865f2;
+            border: 1px solid #2c5da1;
         }
         .item_derecho {
-            background-color: #5865f2;
+            background-color: #ffcb05;
             height: 30px;
             width: 30px;
             color: white;
@@ -54,3 +54,8 @@
 
     }
 }
+
+@media only screen and (max-width: 480px) {
+    .section_pagination {
+        margin: 85px 0;}
+  }

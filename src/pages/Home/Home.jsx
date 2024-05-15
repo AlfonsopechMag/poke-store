@@ -13,7 +13,6 @@ export default function Home() {
   const [arrayPokemon, setArrayPokemon] = useState([]);
   const [globalPokemon, setGlobalPokemon] = useState([]);
   const [xpage, setXpage] = useState(1);
-  const [search, setSearch] = useState('');
   const [currency, setCurrency] = useState("MXN");
   const [rate, setRate] = useState(0);
   const [addCart, setAddCart] = useState([]);
@@ -31,7 +30,7 @@ export default function Home() {
 
     api();
     getGlobalPokemons();
-  }, [xpage, search]);
+  }, [xpage]);
 
   function handleCurrency(e){
     let currencyNew = e.target.value;         
@@ -115,6 +114,7 @@ export default function Home() {
   return (
     <div className={css.layout}>
       <ToastContainer />
+      
       <Header changeCurrency={handleCurrency} cartItems={addCart} deleteItems={deleteItems} currency={currency} setCartItems={setAddCart}/>
       <section className={css.section_pagination}>
         <div className={css.div_pagination}>
