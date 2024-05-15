@@ -22,7 +22,7 @@ export default function Header({ changeCurrency, cartItems, deleteItems, currenc
     
     useEffect(() => {
       loadPurchasesFromLocalStorage();
-  }, []);
+  }, [cartItems]);
 
   function loadPurchasesFromLocalStorage() {
     let loadedPurchases = localStorage.getItem("pokemon_purchase");
@@ -256,7 +256,7 @@ export default function Header({ changeCurrency, cartItems, deleteItems, currenc
                 </button>
                 {showHistory && 
                   <Modal cartItems={true} handleClose={()=>setShowHistory(false)}> 
-                  <History historyPurchase={historyPurchase} currency={currency}/>
+                    <History historyPurchase={historyPurchase} currency={currency}/>
                 </Modal>
                 }
                 

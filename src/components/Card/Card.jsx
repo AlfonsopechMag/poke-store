@@ -87,7 +87,7 @@ export default function Card({  card, rate, currency, addToCart }) {
           
           <div className="button_buy">
             <button type="button" onClick={()=>addToCart({image: itemPokemon?.sprites?.other["official-artwork"]?.front_default, name: itemPokemon.name ,
-              originalPrice: itemPokemon.base_experience ,changePrice: currency !== "MXN" ? newRate : "" })}>
+              originalPrice: itemPokemon.base_experience ,changePrice: currency !== "MXN" ? newRate : "", currency: currency })}>
                 Comprar
             </button>
           </div> 
