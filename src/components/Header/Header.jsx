@@ -20,7 +20,6 @@ export default function Header({ changeCurrency, cartItems, deleteItems, currenc
     const [showLoader, setShowLoader] = useState(false);
     const [historyPurchase, setHistoryPurchase] = useState([]);
     
-console.log(cartItems);
     useEffect(() => {
       loadPurchasesFromLocalStorage();
   }, []);
