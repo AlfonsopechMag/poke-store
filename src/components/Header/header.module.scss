@@ -1,0 +1,153 @@
+.header {
+    background-color: #d1cfcf;
+  .div_header {
+    height: 64px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 1400px;
+    max-width: calc(100% - 30px);
+    margin: 0 auto;
+
+    .div_logo {
+      > img {
+        width: 120px;
+      }
+      margin-right: 5px;
+    }
+
+    .div_search {
+
+      width: 30%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      border-radius: 10px;
+      overflow: hidden;
+      height: 30px;
+      box-shadow: 1px 1px 4px #000;
+
+
+      @media screen and (max-width : 500px) {
+        width: 50%;
+      }
+
+
+
+
+      >div {
+        width: 20%;
+        background-color: rgb(31, 134, 237);
+        height: 30px;
+        display: grid;
+        place-items: center;
+        color: white;
+      }
+      >input {
+        width: 80%;
+        padding: 4px 10px;
+        height: 30px;
+        border: none;
+        outline: none;
+
+      }
+
+
+    }
+  }
+
+  .currency{
+    width: 60px;
+    height: 30px;
+    border-radius: 10px;
+  }
+
+  .currency_container{
+    display: inline-flex;
+  }
+
+  .cart_icon{
+    font-size: 25px;
+  }
+
+  .confirm_row{
+    padding: 5px;
+    display: flex;
+    justify-content: center;
+  }
+
+  .img_poke{
+    width: 70px;
+  }
+
+  .history_row{
+    padding: 0px 10px 0px 5px;
+  }
+
+  .wallet_input{
+    width: 60px;
+    height: 30px;
+    border-radius: 10px;
+    margin-top: 5px;
+  }
+
+  .wallet_row{
+    padding: 5px 10px 0px 0;
+  }
+
+  .wallet_label{
+    font-weight: 600;
+  }
+
+  .quantity_label{
+    font-weight:600;
+  }
+
+  .icon_wallet{
+    font-size: 16px;
+  }
+
+  .icon_delete{
+    font-size: 16px;
+    color: white;
+  }
+
+  .currency_label{
+    font-size: 13px;
+  }
+  
+  .button_delete{
+    width: 30px;
+    height: 30px;
+    background-color: #c8264f;
+  }
+
+  .table_row{
+    padding: 15px 0 15px 0;
+  }
+  
+  .btn_checkout{
+    width: 100px;
+    height: 35px;
+    background-color: #1d50d8;
+    color: white;
+  }
+
+  .total_row{
+    display: flex;
+    justify-content: end;
+  }
+
+  .total_label{
+    font-weight: 600;
+    font-size: 20px;
+  }
+
+  .loader_row{
+    padding: 25px 0 25px 0;
+  }
+
+  td, th {
+    text-align: center;
+  }
+}
