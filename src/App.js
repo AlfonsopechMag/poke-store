@@ -1,8 +1,16 @@
 import { Routes, Route } from "react-router-dom";
+import { useEffect } from "react";
 import './App.css';
 import Home from './pages/Home/Home';
+import { initializeTagManager } from "./utils/gtm";
+
 
 function App() {
+  
+  useEffect(() => {
+    initializeTagManager();
+  }, []);
+
   return (
     <div className="App">
       <Routes>

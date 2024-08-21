@@ -10,11 +10,12 @@ import Modal from '../Modal/Modal';
 import History from "../History/History";
 import { toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import TagManager from "react-gtm-module";
 
 
 export default function Header({ changeCurrency, cartItems, deleteItems, currency, setCartItems }) {
-    const [showAddFounds, setShowAddFounds] = useState(false);
     const [walletMoney, setWalletMoney] = useState(0);
+    const [showAddFounds, setShowAddFounds] = useState(false);
     const [showCart, setShowCart] = useState(false);
     const [showHistory, setShowHistory] = useState(false);
     const [showLoader, setShowLoader] = useState(false);
@@ -39,9 +40,19 @@ export default function Header({ changeCurrency, cartItems, deleteItems, currenc
 }
     function showFounds(e){
         e.preventDefault()
-        showAddFounds ? setShowAddFounds(false) : setShowAddFounds(true)
-    }
+        showAddFounds ? setShowAddFounds(false) : setShowAddFounds(true);
 
+        // send custom event to GTM
+        TagManager.dataLayer({
+          dataLayer: {
+            event: "showFounds",
+            category: "Founds",
+            action: "viewFounds",
+            label: "Your founds",
+            value: "You have $"+walletMoney,
+          },
+        });
+    }
 
     function handleRechargeWallet(e){
       e.preventDefault();
@@ -80,8 +91,6 @@ export default function Header({ changeCurrency, cartItems, deleteItems, currenc
       }
       
     }
-
-    
 
     const sumall =
     cartItems?.map(item => item.changePrice === "" ? item.originalPrice : item.changePrice ).reduce((prev, curr) => prev + curr, 0);
